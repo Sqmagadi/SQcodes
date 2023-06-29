@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: red;
+    margin: 0px 2%;
+    
+}
+
+
+/* STYLE THE NAVIGATION BAR */
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgb(136, 245, 245),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(136, 245, 245)); 
+    font-size: 24px;
+    top: 0px;
+    width: 96%;
+    position: fixed;
+    padding: 8px 0px;
+    font-family: "Garamond","Helvetica", sans-serif; 
+    margin: 0px;
+    justify-content: space-between;
+    z-index: 1;
+    
+    
+}
+/* STYLE THE NAVIGATION BAR LINKS */
+nav a{
+    flex-direction: row;
+    text-decoration: none;
+    margin: 15px 0px ;
+    color: red;
+    padding: 8px 18px;
+    
+    
+}
+/* STYLE THE NAV LINKS ON HOVER */
+nav a:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+/* ADD class = "active". WILL HAVE A GREEN BACKGROUND AND BLUE COLOR- REPLICATED TO ALL OTHER NAV LINKED PAGES */
+.active{
+    background-color: rgb(253, 6, 6);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 20px 0px black; 
+}
+/* DROP DOWN CONTAINER POSITIONS THE DROP DOWN CONTENTS */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+/* HIDE BY DEFAULT DROP CONTENT. POSITION DROP CONTENT ABSOLUTE TO THE DROP DOWN CONTAINNER*/
+.dropcontent {
+    display: none;
+    width: 100%;
+    position: absolute;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    box-shadow: 0px 5px 10px 0px black;
+    z-index: 1;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(136, 245, 245),rgb(255, 255, 255),rgb(255, 255, 255)); 
+}
+/* STYLE THE DROP CONTENT LIST*/
+.dropcontent a {
+    color: black;
+    display: block;
+    font-size: 19px;
+    padding: 7px 0px 7px 8px;
+    margin: 0px;
+    text-align: left;
+    
+  }
+
+/* DISPLAY THE DROP LINKS ON HOVER */
+.dropdown:hover .dropcontent {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is displayed*/
+.dropdown:hover .dropbtn {
+    background-color:green;
+    color: white;
+}
+
+/* STYLE DROP DOWN LINKS ON HOVER
+.dropcontent a:hover {
+    background-color: red; 
+}
+*/
+
+
+/* PORTALS' MODAL LOGIN FORMS */ 
+.studentloginForm, .staffloginForm{
+    display: none;
+    z-index: 1;
+    width: 40%;
+    height: 300px;
+    background-image: linear-gradient(rgb(250, 0, 0),rgb(255, 255, 255),rgb(136, 245, 245),rgb(255, 255, 255),rgb(255, 8, 8)); 
+    margin-left: 450px;
+    top: 0px;
+    position: fixed;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formInner{
+    margin: 20px;
+    border: 2px solid white;
+    height: 90%;
+    background-color: beige;
+    padding: 5px;
+
+}
+
+.close, .close2{
+    float: right;
+    font-size: 35px;
+    margin: 0px;
+}
+
+.close:hover{
+    color: red;
+    cursor: pointer;
+}
+.close2:hover {
+    color: red;
+    cursor: pointer;
+}
+.formInner h2{
+    text-align: center;
+    font-size: 25px;
+    clear: both;
+    padding: 0px;
+}
+
+.formContent{
+    padding: 10px;
+}
+
+input[type=text], input[type=password], input[type=submit] {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=submit] {
+    background-color: green;
+    padding: 8px !important;
+    
+}
+/* PORTALS' MODAL LOGIN FORMS END */
+
+
+
+
+header{
+    margin-top: 58px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(136, 245, 245),rgb(255, 255, 255));
+    box-shadow: 0px 5px 20px 0px black;
+}
+/* STYLE THE ADDRESS */
+
+.address{
+    font-size: 12px;
+    color: rgb(0, 0, 0); 
+    font-family: "Garamond",serif;
+}
+
+/* STYLE THE LOGO, NAME AND MOTTO SECTION */
+/* LOGO, NAME AND MOTTO TO FLEX IN COLUMN DIRECTION (NAME AND MOTTO TO BE UNDER THE LOGO) */
+.centerheader{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    margin-top: 2px;
+}
+
+/* STYLE LOGO */
+#logo{
+    align-self: center;
+}
+
+/* STYLE NAME */
+.schoolname{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    margin-top: -5px;
+    align-self: center;
+}
+
+/* STYLE THE MOTTO */
+.motto{
+    color: rgb(0, 0, 0);
+    margin-top: -30px;
+    align-self: center;
+    font-family: "Garamond",serif;
+    font-size: small;
+}
+
+/* STYLE CONTACTS */
+.contacts a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    flex-direction: row;
+    font-family: "Garamond",serif;
+}
+
+.schoolbackground{
+    /*background-image: url(/Crown_Lakes_Academy/cla_images/cla_school/school1.jpg); 
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: left;
+    width: 100%;
+    height: 280px;
+    margin: auto;
+    overflow-x: hidden;
+    */
+    position: relative;
+    color: #ffffff;
+    display: flex;
+
+}
+
+/* STYLE THE SLIDING WORDS */
+
+.slide-text{
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    font-family: "Garamond","Sofia", serif;
+    font-size: 35px;
+
+  }
+
+ 
+
+ .breakpoint p:first-of-type, .breakpoint p:last-of-type, .breakpoint h2  {
+    text-align: center;
+    padding: 0px 10px 0px ;
+    font-size: 22px;
+ } 
+ .breakpoint p:nth-last-child(2){
+    color: #17311f;
+ }
+.breakpoint{
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(136, 245, 245),rgb(255, 255, 255));
+    margin-top: 5px; 
+    font-family: "Garamond",serif;
+    padding: 5px;
+    font-size: 22px;
+}
+
+
+/* STYLE THE FLEXIBLE GRID CONTAINER */
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.leftside{
+    flex: 25%;
+    flex-direction: column;
+    background-color:rgb(154, 235, 250);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.center{
+    flex: 50%;
+    background-color: rgb(225, 233, 214);
+    padding: 10px;
+}
+
+.rightside{
+    flex: 25%;
+    background-color: rgb(154, 235, 250);
+    padding: 10px;
+}
+
+/* STYLE THE CONTENT OF THE FLEXIBLE GRID CONTAINER */
+.updates{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.apply button{
+    padding: 30px 50px 30px 50px;
+    background-color: rgb(255, 8, 8);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 10px;  
+}
+
+.apply button:hover {
+    background-color: #27bb01;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(136, 245, 245),rgb(255, 255, 255));
+    margin-top: 5px;
+    
+}
+
+@media screen and (max-width: 320px){
+    .topnav{
+      flex-direction: column;
+      position: absolute;
+    }
+    .header{
+        flex-direction: column;
+    }
+    #logo{
+        max-width: 50px;
+        max-height: 50px;
+    }
+    body{
+        background-color: rgb(4, 255, 38);
+        margin: 2px;
+        padding: 5px;
+        font-size: smaller; 
+    }
+    
+    .picture{
+        flex-direction: column;
+    }
+    img{
+        width: auto;
+        height: auto;
+    }
+
+    
+}
+
